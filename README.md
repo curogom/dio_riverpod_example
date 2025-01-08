@@ -7,7 +7,6 @@ This Flutter project provides a mobile client for interacting with an AI backend
 - Seamless integration with the AI backend server.
 - Efficient communication using optimized data structures.
 - User-friendly interface for interacting with the AI.
-- [Add specific features of your application here]
 
 ## Requirements
 
