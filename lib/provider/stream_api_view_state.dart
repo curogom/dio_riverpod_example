@@ -39,7 +39,7 @@ class StreamApiViewStateNotifier extends _$StreamApiViewStateNotifier {
           response: [...state.response ?? [], res],
         );
 
-        await Future.delayed(const Duration(milliseconds: 25));
+        await Future.delayed(const Duration(milliseconds: 100));
       }
     } catch (e) {
       state = state.copyWith(connectState: NetworkConnectState.connected);

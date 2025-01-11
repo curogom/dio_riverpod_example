@@ -44,15 +44,15 @@ class BookingApiRequestContent extends ConsumerWidget {
           child: CircularProgressIndicator(),
         );
       case NetworkConnectState.connected:
-        return StreamView(state.response);
+        return BookingStreamView(state.response);
     }
   }
 }
 
-class StreamView extends ConsumerWidget {
+class BookingStreamView extends ConsumerWidget {
   final List<CommonResponse> contents;
 
-  const StreamView(List<CommonResponse>? stream, {super.key})
+  const BookingStreamView(List<CommonResponse>? stream, {super.key})
       : contents = stream ?? const [];
 
   @override
@@ -91,7 +91,7 @@ class _TextField extends ConsumerWidget {
     final controller = TextEditingController();
     final notifier = ref.read(streamApiViewStateNotifierProvider.notifier);
     return Container(
-      height: 60,
+      height: 80,
       margin: const EdgeInsets.only(bottom: 28, top: 12),
       padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       child: TextField(
